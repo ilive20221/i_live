@@ -4,6 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const fs = require('fs')
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
 var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
 
@@ -43,8 +47,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
 module.exports = app;
