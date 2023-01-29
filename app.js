@@ -4,7 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const fs = require('fs')
-let ejs = require('ejs');
 const port = process.env.PORT || 3000;
 
 
