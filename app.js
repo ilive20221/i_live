@@ -43,9 +43,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const port: number = Number(!!process.env.PORT) || 3000;
-app.listen(PORT,()=>{
-    console.log("listening server")
-})
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
 
 module.exports = app;
