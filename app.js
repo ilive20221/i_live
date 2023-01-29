@@ -43,8 +43,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(8000, () => {
-  console.log('Running at Port 8000...');
-});
-
 module.exports = app;
