@@ -7,7 +7,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
-    title:"【有料会員限定】アイライブ鍵",
+    title:"【投稿一覧】アイライブ",
     content:dataList
   });
 });
