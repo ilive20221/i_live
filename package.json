@@ -11,6 +11,8 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "ejs": "~3.1.5"
+    "ejs": "~3.1.5",
+    "twitter-api-sdk": "^1.2.1",
+    "twitter-url": "^1.1.3",
   }
 }
