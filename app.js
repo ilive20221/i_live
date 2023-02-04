@@ -1,4 +1,3 @@
-const twitterGetUrl = require("twitter-url-direct")
 const {Client} = require('twitter-api-sdk');
 const da=[]
 const fs = require("fs")
