@@ -44,7 +44,7 @@ async function we(url){
       bb = await 0
     }else{
       try {
-        await resArray.push(details)
+        await resArray.unshift(details)
         console.log('挿入しました')
       }catch (error) {
         console.log("動画なし")
@@ -52,7 +52,7 @@ async function we(url){
     }
   }else{
     try {
-      await resArray.push(details)
+      await resArray.unshift(details)
       console.log('挿入しました')
     }catch (error) {
       console.log("動画なし")
