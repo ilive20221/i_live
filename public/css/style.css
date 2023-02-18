@@ -1,11 +1,42 @@
 body {
   margin: 0;
   display: block;
+  background-color: #ffffff;
 }
 
 img{
   min-height: 100px;
   max-height: 360px;
+}
+
+.container{
+  position: relative;
+}
+
+
+.text-box{
+  text-align: center;
+  padding: 1em 1em;
+  margin: 0 auto;
+  font-weight: bold;
+  color: #6091d3;/*文字色*/
+  background: #FFF;
+  border: solid 3px #6091d3;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+.jin{
+  padding: 1rem;
+  font-weight: 500;
+  text-align: left;
+  font-size: 2rem;
+  color: #fff !important;
+  background-color: #2b2b2b;
+  letter-spacing: 0;
+  border-radius: 20px;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  top: 0;
+  left: 0;
 }
 
 #scroll {
