@@ -4,20 +4,24 @@
 <head>
 	<meta charset="UTF-8">
   <link type="text/css" rel="stylesheet" href="/css/style.css">
-	<title>【投稿一覧】アイライブ</title>
+	<title>アイライブ</title>
 </head>
 
 <body>
 	<h1><%= title %><a href="https://twitter.com/t53942800">＠t53942800</a></h1>
 	<div class="scroll" id="scroll">
-    <% for (c of content){ %>
-			<section>
-    	<a href="<%= c.highest_video_url %>" target="_blank">
-			<img src="<%= c.thumbnail %>" width="280" height="360" alt="">
-      </a>
-			</section>
+    <% for ([index, c] of Object.entries(content)){ %>
+			<div class="container">
+				<span class="jin"><%= index %></span>
+    		<a href="<%= c.highest_video_url %>" target="_blank">
+					<img src="<%= c.thumbnail %>" width="280" height="360" alt="">
+      	</a>
+			</div>
+				<div class="text-box">
+					<a href="https://twitter.com/messages/compose?recipient_id=1557204808616255490&text=<%= index %>">買う</a>
+				</div>
+
     <% } %>
 </div>
 </body>
 </html>
-
