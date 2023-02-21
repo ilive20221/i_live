@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" href="/css/style.css">
+	<title>アイライブ</title>
+</head>
+
+<body>
+	<header class="">
+		<div class="position-relative">
+			<div class="position-absolute top-50 start-50 translate-middle site_title">
+				<h1><a href="https://twitter.com/t53942800">アイライブ</a></h1>
+			</div>
+		</div>
+	</header>
+	<div class="main-container">
+
+		<div class="margin_area">
+			<h2 class="page"></h2>
+			<div class="explanation">1動画980円<br>paypay・アマギフ</div>
+			<ul class="nav justify-content-center">
+				<li class="nav-item" style="border-bottom:1px solid #da4a4a;margin-right:5px;">
+					<a class="nav-link" href="/">新着</a>
+				</li>
+				<li class="nav-item" style="border-bottom:1px solid #da4a4a;margin-right:5px;">
+					<a class="nav-link" href="/pan">パンチラ</a>
+				</li>
+				<li class="nav-item" style="border-bottom:1px solid #da4a4a;margin-right:5px;">
+					<a class="nav-link" href="/mune">胸チラ</a>
+				</li>
+				<li class="nav-item" style="border-bottom:1px solid #da4a4a;margin-right:5px;">
+					<a class="nav-link" href="/tiku">地区B</a>
+				</li>
+			</ul>
+		</div>
+		<div class="content_area margin_area text_center">
+			<div class="scroll" id="scroll">
+				<% for ([index, c] of Object.entries(content)){ %>
+					<% var w = c.title.split('\n') %>
+					<% if(~w[0].indexOf('地区B')){ %>
+						<div class="container">
+							<span class="jin"><%= len-index %></span>
+							<a href="<%= c.highest_video_url %>" target="_blank">
+								<img src="<%= c.thumbnail %>" width="280" height="360" alt="">
+							</a>
+							<div class="text-box">
+								<div class="text-box-two-container">
+									<div class="text-box-two">
+										<p><%= w[0] %></p>
+									</div>
+									<div class="text-box-two">
+										<p><%= w[1] %></p>
+									</div>
+								</div>
+								<a href="https://twitter.com/messages/compose?recipient_id=1557204808616255490&text=<%= len-index %>%0a======================%0a%0aここにpaypayリンク貼り付け%0a%0a======================%0a" target="_blank">
+									<div class="text-box-one">
+										<span>BUY</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<% } %>
+						<% } %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

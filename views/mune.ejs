@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
   <link type="text/css" rel="stylesheet" href="/css/style.css">
@@ -22,6 +21,9 @@
 <div class="explanation">1動画980円<br>paypay・アマギフ</div>
 <ul class="nav justify-content-center">
 	<li class="nav-item" style="border-bottom:1px solid #da4a4a;margin-right:5px;">
+		<a class="nav-link" href="/">新着</a>
+	</li>
+	<li class="nav-item" style="border-bottom:1px solid #da4a4a;margin-right:5px;">
 		<a class="nav-link" href="/pan">パンチラ</a>
 	</li>
 	<li class="nav-item" style="border-bottom:1px solid #da4a4a;margin-right:5px;">
@@ -36,6 +38,7 @@
 		<div class="scroll" id="scroll">
 			<% for ([index, c] of Object.entries(content)){ %>
 				<% var w = c.title.split('\n') %>
+				<% if(~w[0].indexOf('胸チラ')){ %>
 				<div class="container">
 					<span class="jin"><%= len-index %></span>
 					<a href="<%= c.highest_video_url %>" target="_blank">
@@ -57,6 +60,7 @@
 						</a>
 					</div>
 				</div>
+				<% } %>
 			<% } %>
 	</div>
 	</div>
