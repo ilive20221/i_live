@@ -70,7 +70,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
-//var usersRouter = require('./routes/users');
+var muneRouter = require('./routes/mune');
+var tikuRouter = require('./routes/tiku');
+var panRouter = require('./routes/pan');
 var app = express();
 
 // view engine setup
@@ -83,12 +85,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
-//app.use('/us', usersRouter);
-//var dataList = JSON.parse(fs.readFileSync('./index.json', 'utf8'));
-//// 写真リストを取得するAPI
-//app.get("/api/data/list", function(req, res, next){
-//    res.json(dataList);
-//});
+app.use('/mune', muneRouter);
+app.use('/tiku', tikuRouter);
+app.use('/pan', panRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
