@@ -7,6 +7,8 @@ const userName = "t53942800";
 var bb="co";
 const data = fs.readFileSync('index.json', 'utf8');
 const resArray = JSON.parse(data);
+var resArray2=[];
+
 (async () => {
     const { data } = await client.users.findUserByUsername(userName);
     //console.log(data)
@@ -19,6 +21,7 @@ const resArray = JSON.parse(data);
       //console.log(page)
       for await (const p of page.data){
         const url = await "https://twitter.com/t53942800/status/"+p.id
+        console.log(url)
         if(bb!=0){
           try {
             await we(url)
@@ -30,7 +33,8 @@ const resArray = JSON.parse(data);
         }
       }
     }
-    var json_text = await JSON.stringify(resArray);
+    let resAll = resArray2.concat(resArray);
+    var json_text = await JSON.stringify(resAll);
     await fs.writeFileSync('index.json',json_text, 'utf8');
 })();
 
@@ -44,18 +48,18 @@ async function we(url){
       bb = await 0
     }else{
       try {
-        await resArray.unshift(details)
+        await resArray2.push(details)
         console.log('挿入しました')
       }catch (error) {
-        console.log("動画なし")
+        console.log("挿入できない")
       }
     }
   }else{
     try {
-      await resArray.unshift(details)
+      await resArray.push(details)
       console.log('挿入しました')
     }catch (error) {
-      console.log("動画なし")
+      console.log("挿入できない")
     }
   }
 }
